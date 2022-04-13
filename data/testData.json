@@ -1,0 +1,36 @@
+{
+	"situations": [
+		{
+			"title": "Just a friend request 👨‍👧",
+			"description": "You wake up, you have a friend request on TikTok - but actually, you think that you were already friends on that platform. Do you accept the friend request again?",
+			"answer": "left",
+			"video": "https://placeimg.com/600/300/people"
+		},
+		{
+			"title": "Reset a password 🔑",
+			"description": "At school you have forgotten the password to your school email. To create a new password you get a message with a link to re-set. Is it safe to click that link?",
+			"answer": "right",
+			"video": "https://placeimg.com/600/300/people"
+		},
+		{
+			"title": "Use that password 💻",
+			"description": "You clicked the link to set a new password on your school email and now have to choose a new password. The page lets you use a combination of your first name and your birth date as a password. Great! An easy to remember password. Let's use it!",
+			"answer": "left",
+			"video": "https://placeimg.com/600/300/people"
+		},
+		{
+			"title": "Get some Lego! 🤑",
+			"description": "You just got home from school and want to buy that new Lego online. On the official shop, it's over 200 Euros 🙁 But fortunately, you find it for 85 Euros on cheap-lego.com.ru. Great opportunity to buy it there, or what would you say?",
+			"answer": "left",
+			"video": "https://placeimg.com/600/300/people"
+		},
+		{
+			"title": "Call back 📞",
+			"description": "Luckily, you noticed that the site is not trustable. Oh, a call. +599 43 965 4342 calls, but the call ends immediately for some reason. Doesn't matter, just call back, don't you?",
+			"answer": "left",
+			"video": "https://placeimg.com/600/300/people"
+		}
+	]
+}
+
+
