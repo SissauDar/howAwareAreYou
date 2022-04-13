@@ -23,12 +23,11 @@ index
   Card.prototype.generateHTML = function() {
     return `
     <div class="tinder--card" data-index=${this.index} data-answer=${this.answer} data-explanation=false>
-        <img src="${this.video}">
+        <img src="${this.url}">
         <h3>${this.title}</h3>
         <p>${this.description}</p>
     </div>
     <div class="tinder--card" data-index=${this.index} data-explanation=true >
-        <img src="${this.url}">
         <h3>Explanation</h3>
         <p>${this.explanation}</p>
     </div>
@@ -171,13 +170,16 @@ allCards.forEach(function (el) {
     var xMulti = event.deltaX * 0.03;
     var yMulti = event.deltaY / 80;
     var rotate = xMulti * yMulti;
-
+// console.log(event.target.nextElementSibling.classList.add('blur'));
+event.target.nextElementSibling.classList.add('blur')
     event.target.style.transform = 'translate(' + event.deltaX + 'px, ' + event.deltaY + 'px) rotate(' + rotate + 'deg)';
   });
 
   hammertime.on('panend', function (event) {
     document.body.classList.value = ''
     el.classList.remove('moving');
+    const bluredItem = document.querySelector(`.blur`);
+    bluredItem.classList.remove('blur');
     tinderContainer.classList.remove('tinder_arrow-right');
     tinderContainer.classList.remove('tinder_arrow-left');
 
