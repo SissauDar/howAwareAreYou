@@ -171,7 +171,10 @@ allCards.forEach(function (el) {
     var yMulti = event.deltaY / 80;
     var rotate = xMulti * yMulti;
 // console.log(event.target.nextElementSibling.classList.add('blur'));
-event.target.nextElementSibling.classList.add('blur')
+if(event.target.nextElementSibling){
+
+  event.target.nextElementSibling.classList.add('blur')
+}
     event.target.style.transform = 'translate(' + event.deltaX + 'px, ' + event.deltaY + 'px) rotate(' + rotate + 'deg)';
   });
 
