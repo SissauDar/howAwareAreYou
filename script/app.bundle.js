@@ -135,7 +135,7 @@ for (const key in data) {
   
   // url: `https://api.giphy.com/v1/gifs/random?api_key=laiIak6fXa3h4HNzXAEyjTCyM3KYhcFZ&tag=${data[key].subject}&rating=g`,
   const gif = await dataAccess.testDataAPI({
-    url: `https://api.giphy.com/v1/gifs/search?api_key=laiIak6fXa3h4HNzXAEyjTCyM3KYhcFZ&q=${data[key].subject}&limit=${limitGif}`,
+    url: `https://api.giphy.com/v1/gifs/search?api_key=laiIak6fXa3h4HNzXAEyjTCyM3KYhcFZ&q=${data[key].subject}&limit=${limitGif}&rating=g`,
     handleError: (error) => console.log('Something went wrong: ', error)
   });
   
