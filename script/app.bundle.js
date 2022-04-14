@@ -280,6 +280,11 @@ function createButtonListener(love) {
               } 
           }
         }
+        const bluredItem = document.querySelector(`.blur`);
+        if(bluredItem){
+
+          bluredItem.classList.remove('blur');
+        }
 
     cardModule.initCards();
 
