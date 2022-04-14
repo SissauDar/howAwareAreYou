@@ -28,7 +28,7 @@ index
         <p>${this.description}</p>
     </div>
     <div class="tinder--card" data-index=${this.index} data-explanation=true >
-        <h3>Explanation</h3>
+        <h3>Uitleg 🗣</h3>
         <p>${this.explanation}</p>
     </div>
     `;
@@ -100,11 +100,19 @@ const dataAccess = (function() {
 
   document.addEventListener('DOMContentLoaded', async () => {
     console.log('Script loaded ✔');
+const online = false;
+    // let url = `url: 'data/testData.json'`;
+    // if(online){
+      url = 'https://opensheet.elk.sh/15AtUtwjUFkKBXe3V-JtSFNhI08Hngi0t0Wxahe-IC-Y/situations';
+    // }
 
     const data = await dataAccess.testDataAPI({
-      url: 'https://opensheet.elk.sh/15AtUtwjUFkKBXe3V-JtSFNhI08Hngi0t0Wxahe-IC-Y/situations',
+      url: url,
       handleError: (error) => console.log('Something went wrong: ', error)
     });
+
+    console.log(data);
+    
     
     
 
@@ -126,7 +134,7 @@ for (const key in data) {
     handleError: (error) => console.log('Something went wrong: ', error)
   });
   
-console.log(gif.data[0].images);
+// console.log(gif.data[0].images);
   cardObj.push(new Card({
     title: data[key].title,
     description: data[key].description,
