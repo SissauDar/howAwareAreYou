@@ -100,16 +100,21 @@ const dataAccess = (function() {
 
   document.addEventListener('DOMContentLoaded', async () => {
     console.log('Script loaded ✔');
-const online = false;
-    // let url = `url: 'data/testData.json'`;
-    // if(online){
+    const urlParams = new URLSearchParams(window.location.search);
+    const offline = urlParams.get('offline')
+    let url = `data/testData.json`;
+    if(!offline){
       url = 'https://opensheet.elk.sh/15AtUtwjUFkKBXe3V-JtSFNhI08Hngi0t0Wxahe-IC-Y/situations';
-    // }
+    }
 
-    const data = await dataAccess.testDataAPI({
+    let data = await dataAccess.testDataAPI({
       url: url,
       handleError: (error) => console.log('Something went wrong: ', error)
     });
+
+    if(offline){
+      data = data.situations;
+    }
 
     console.log(data);
     
